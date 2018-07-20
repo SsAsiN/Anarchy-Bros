@@ -3,26 +3,63 @@
 <head>
   <title>Anarchy Bros - Welcome</title>
   <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="style.css">
+  <script>
+    var Links = {
+      setColor:function(color){
+        var alist = document.querySelectorAll('a');
+          var i = 0;
+          while(i < alist.length){
+	    	      alist[i].style.color = color;
+	    	      i = i + 1;
+	    	  }
+      }
+    }
+    var Body = {
+      setColor:function (color){
+        document.querySelector('body').style.color = color;
+      },
+      setBackgroundColor:function (color){
+        document.querySelector('body').style.backgroundColor = color;
+      }
+    }     
+    function nightDayHandler(self){
+      var target = document.querySelector('body');
+      if(self.value === 'night'){
+        Body.setBackgroundColor('black');
+        Body.setColor('white');
+        self.value = 'day';
+
+        Links.setColor('powderblue');
+      } else {
+        Body.setBackgroundColor('white');
+        Body.setColor('black');
+        self.value = 'night';
+
+        Links.setColor('blue');
+        }
+    } 
+  </script>
 </head>
   <body>
   <h1><a href="index.html">ANARCHY BROS</a></h1>
   <div id="grid">
-    <ol>
-      <li><a href="1.html" class="saw">Design</h1></a></li>
-      <li><a href="2.html" class="saw">Cafe & Pub</h1></a></li>
-      <li><a href="3.html">Program</h1></a></li>
-    </ol>
-  <!--
-    <h1><a href="index.html">WEB</a></h1>
+    <div style="width:150px;display:grid">
       <ol>
-      <li><a href="1.html"><u>Design</u></h1></a></li>
-      <li><a href="2.html"><u>Cafe & Pub</u></h1></a></li>
-      <li><a href="3.html"><u>Program</u></h1></a></li>
-    </ol>
+        <li><a href="1.html" class="saw">Design</h1></a></li>
+        <li><a href="2.html" class="saw">Cafe & Pub</h1></a></li>
+        <li><a href="3.html">Program</h1></a></li>
+      </ol>
+    </div>
+  <!--
+        <h1><a href="index.html">WEB</a></h1>
+          <ol>
+          <li><a href="1.html"><u>Design</u></h1></a></li>
+          <li><a href="2.html"><u>Cafe & Pub</u></h1></a></li>
+          <li><a href="3.html"><u>Program</u></h1></a></li>
+        </ol>
   -->
-    <div>
+    <div style="width:150px;display:grid">
       <ul>
         <li>Kim</li>
         <li>Hahn</li>
@@ -30,14 +67,77 @@
       </ul>
     </div>
   </div>
-      <iframe width="560" height="315" src="https://www.youtube.com/embed/7T7r_oSp0SE" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+      <input id='day_night'type="button" value="night" onclick="
+      nightDayHandler(this);
+    ">
+      <input type="button" value="hi">
+      <input id='day_night'type="button" value="night" onclick="
+      if(document.querySelector('#day_night').value === 'night'){
+        document.querySelector('body').style.backgroundColor='black'
+        document.querySelector('body').style.color='white'
+        document.querySelector('#day_night').value = 'day'
+      } else {
+        document.querySelector('body').style.backgroundColor='white'
+        document.querySelector('body').style.color='black'
+        document.querySelector('#day_night').value = 'night'
+      }
+      ">
     <div>
-      <a id="codi" href="https://www.youtube.com/channel/UCvc8kv-i5fvFTJBFAk6n1SA"target="_blank">생활코딩</a>
+      <iframe width="100%" height="100%" src="https://www.youtube.com/embed/7T7r_oSp0SE" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+    </div>
+    <div>
+      <a id="codi" href="https://www.youtube.com/channel/UCvc8kv-i5fvFTJBFAk6n1SA"target="_blank">Link : 생활코딩</a>
     </div>
       <h2>Anarchy Bros _ 아나키브로스</h2>
       <a href="https://www.tripadvisor.co.kr/Restaurant_Review-g294197-d12200117-Reviews-Aniki_Bros-Seoul.html"target="_blank" title="Anarchy">ACBACB</a> makes a New <strong><u>Streaming Video Player</u></strong> Tool.
-      <p style="margin-top:70px;">I like likelikelike fucking</p>
+      <p style="margin-top:70px;">I like likelikelike </p>
       <img src="girl.jpg" width="100%">
-      <p>I like likelikelike fuckingI like likelikelike fucking
-      <br>I like likelikelike fuckingI like likelikelike fuckingI like likelikelike fuckingI like likelikelike fucking</p>
+      <p>I like likelikelike  like likelikelike 
+      <br>I like likelikelike  like likelikelike  like likelikelike  like likelikelike </p>
+    <div class=bot>  
+      <div>
+          <input id='day_night2'type="button" value="night" onclick="
+            if(this.value === 'night'){
+              document.querySelector('body').style.backgroundColor='black';
+              document.querySelector('body').style.color='white';
+              this.value = 'day';
+            } else {
+              document.querySelector('body').style.backgroundColor='white';
+              document.querySelector('body').style.color='black';
+              this.value = 'night';
+            }
+          ">
+        </div>
+        <div>
+          <input type="button" value="night" onclick="
+            var target = document.querySelector('body');
+            var bodyStyle = document.querySelector('body').style;
+            if(this.value === 'night'){
+              target.style.backgroundColor='black';
+              target.style.color='white';
+              this.value = 'day';
+              document.querySelector('#day_night').value = 'day'
+              document.querySelector('#day_night2').value = 'day'
+              var alist = document.querySelectorAll('a');
+              var i = 0;
+              while(i < alist.length){
+		              alist[i].style.color = 'powderblue';
+		              i = i + 1;
+		              }
+            } else {
+              bodyStyle.backgroundColor='white';
+              bodyStyle.color='black';
+              this.value = 'night';
+              document.querySelector('#day_night').value = 'night'
+              document.querySelector('#day_night2').value = 'night'
+              var alist = document.querySelectorAll('a');
+              var i = 0;
+              while(i < alist.length){
+		              alist[i].style.color = 'blue';
+		              i = i + 1;
+		              }
+            }
+            ">
+        </div>
+    </div>
 </body>

@@ -44,7 +44,7 @@
   <body>
   <h1><a href="index.html">ANARCHY BROS</a></h1>
   <div id="grid">
-    <div style="width:150px;display:grid">
+    <div>
       <ol>
         <li><a href="1.html" class="saw">Design</h1></a></li>
         <li><a href="2.html" class="saw">Cafe & Pub</h1></a></li>
@@ -59,7 +59,7 @@
           <li><a href="3.html"><u>Program</u></h1></a></li>
         </ol>
   -->
-    <div style="width:150px;display:grid">
+    <div>
       <ul>
         <li>Kim</li>
         <li>Hahn</li>
@@ -70,7 +70,9 @@
       <input id='day_night'type="button" value="night" onclick="
       nightDayHandler(this);
     ">
-      <input type="button" value="hi">
+      <input type="button" value="hi" onclick="
+      alert('hello')
+      ">
       <input id='day_night'type="button" value="night" onclick="
       if(document.querySelector('#day_night').value === 'night'){
         document.querySelector('body').style.backgroundColor='black'
